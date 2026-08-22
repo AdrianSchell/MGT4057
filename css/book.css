@@ -1,0 +1,711 @@
+/* Master stylesheet for the online textbook. Link every chapter to this file. */
+:root {
+  --book-blue: #3367d6;
+  --link-blue: #1f62c7;
+  --ink: #050505;
+  --muted: #555;
+  --rule: #1c1c1c;
+  --page: #fff;
+  --soft-gray: #f6f6f6;
+  --learning-red: #ad4249;
+  --takeaway-green: #4f8373;
+  --exercise-indigo: #50558e;
+  --manager-blue: #2e718d;
+  --ai-purple: #6d5a92;
+  --example-gold: #9a6a22;
+  --case-slate: #5f6f78;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.68;
+}
+
+.book-shell {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 34px 32px 72px;
+}
+
+.book-meta,
+.chapter-nav,
+.source,
+.caption,
+.long-description summary,
+.box-title,
+table,
+code,
+pre,
+.footnotes,
+.references,
+.definition-list dt {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.book-meta {
+  margin-bottom: 2.2rem;
+  color: #666;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.book-meta strong {
+  display: block;
+  color: #111;
+}
+
+.chapter-nav {
+  display: flex;
+  gap: 0.65rem;
+  justify-content: center;
+  margin: 2.4rem 0 0;
+  font-size: 0.82rem;
+}
+
+.chapter-nav a {
+  border: 1px solid #c9d1dc;
+  border-radius: 4px;
+  color: var(--link-blue);
+  padding: 0.28rem 0.55rem;
+  text-decoration: none;
+}
+
+.chapter-nav a:hover,
+.chapter-nav a:focus-visible {
+  background: #f3f7ff;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1.14;
+}
+
+h1 {
+  margin: 0 0 1.55rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1.35rem;
+  color: var(--book-blue);
+  font-size: 2.65rem;
+}
+
+h2 {
+  margin: 2.35rem 0 1rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.65rem;
+  color: var(--book-blue);
+  font-size: 1.62rem;
+}
+
+h3 {
+  margin: 2rem 0 0.7rem;
+  color: var(--book-blue);
+  font-size: 1.28rem;
+}
+
+h4 {
+  margin: 1.5rem 0 0.5rem;
+  color: purple;
+  font-size: 1rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+a {
+  color: var(--link-blue);
+}
+
+sup a {
+  text-decoration: none;
+}
+
+.key-term {
+  border-bottom: 2px solid var(--book-blue);
+  color: #111;
+  font-weight: 700;
+}
+
+.definition-list {
+  margin: 1.2rem 0;
+  border-top: 1px solid #d9d9d9;
+}
+
+.definition-list dt {
+  margin-top: 1rem;
+  color: #111;
+  font-weight: 700;
+}
+
+.definition-list dd {
+  margin: 0.2rem 0 0.9rem;
+}
+
+.box {
+  --box-color: var(--case-slate);
+  --box-bg: var(--soft-gray);
+  margin: 1.5rem 0 2rem;
+  background: var(--box-bg);
+}
+
+.box-title {
+  margin: 0;
+  border-bottom: 0;
+  background: var(--box-color);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 0.58rem 1rem;
+}
+
+.box-body {
+  padding: 1rem 1.45rem 1.35rem;
+}
+
+.box-body > :first-child {
+  margin-top: 0;
+}
+
+.box-body > :last-child {
+  margin-bottom: 0;
+}
+
+.learning-objectives {
+  --box-color: var(--learning-red);
+  --box-bg: #fbf8f8;
+}
+
+.key-takeaways,
+.chapter-summary {
+  --box-color: var(--takeaway-green);
+  --box-bg: #f4f8f6;
+}
+
+.questions-exercises {
+  --box-color: var(--exercise-indigo);
+  --box-bg: #f7f7fb;
+}
+
+.manager-tip {
+  --box-color: var(--manager-blue);
+  --box-bg: #f0f7f9;
+}
+
+.ai-insight {
+  --box-color: var(--ai-purple);
+  --box-bg: #f7f5fb;
+}
+
+.example-box {
+  --box-color: var(--example-gold);
+  --box-bg: #fbf7ef;
+}
+
+.case-study {
+  --box-color: var(--case-slate);
+  --box-bg: #f3f6f7;
+}
+
+ol,
+ul {
+  margin: 0.6rem 0 1rem 1.45rem;
+  padding: 0;
+}
+
+li {
+  margin: 0.55rem 0;
+  padding-left: 0.3rem;
+}
+
+.box li {
+  margin: 0.65rem 0;
+}
+
+.pull-quote {
+  margin: 1.6rem 0 1.8rem;
+  background: #d7e1e6;
+  padding: 1.55rem 1.75rem;
+  font-style: italic;
+}
+
+.pull-quote p {
+  margin: 0;
+}
+
+.pull-quote cite {
+  display: block;
+  margin-top: 0.35rem;
+  font-style: normal;
+}
+
+.book-figure {
+  margin: 2rem 0;
+}
+
+.book-video {
+  margin: 2rem 0;
+  background: #f4f4f4;
+  padding: 0 0 1rem;
+}
+
+.figure-title {
+  margin: 0 0 0.7rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.book-video .figure-title {
+  margin: 0;
+  padding: 0.85rem 1rem;
+}
+
+.book-figure img {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+}
+
+.video-embed iframe,
+.video-embed video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.book-video .caption {
+  margin: 0;
+  padding: 0.9rem 1rem 0;
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.video-transcript {
+  margin: 0.9rem 1rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.video-transcript a,
+.video-transcript summary {
+  color: var(--link-blue);
+  cursor: pointer;
+  display: inline;
+  font-weight: 700;
+  list-style: none;
+  text-decoration: none;
+}
+
+.video-transcript summary::-webkit-details-marker {
+  display: none;
+}
+
+.video-transcript summary::after {
+  content: " \25be";
+}
+
+.video-transcript[open] summary::after {
+  content: " \25b4";
+}
+
+.video-transcript a:hover,
+.video-transcript a:focus-visible,
+.video-transcript summary:hover,
+.video-transcript summary:focus-visible {
+  text-decoration: underline;
+}
+
+.video-transcript-panel {
+  margin-top: 0.5rem;
+  color: #222;
+}
+
+.source,
+.caption {
+  margin: 0.45rem 0 0;
+  color: #111;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.caption {
+  color: var(--muted);
+}
+
+.long-description {
+  margin-top: 0.75rem;
+}
+
+.long-description summary {
+  color: var(--link-blue);
+  cursor: pointer;
+  font-size: 0.9rem;
+  list-style: none;
+}
+
+.long-description summary::-webkit-details-marker {
+  display: none;
+}
+
+.long-description .hide-label {
+  display: none;
+}
+
+.long-description[open] .show-label {
+  display: none;
+}
+
+.long-description[open] .hide-label {
+  display: inline;
+}
+
+.long-description-panel {
+  margin-top: 0.35rem;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem 1.25rem;
+}
+
+.long-description-panel strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.table-wrap {
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+caption {
+  caption-side: top;
+  margin-bottom: 0.5rem;
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 700;
+  text-align: left;
+}
+
+th,
+td {
+  border: 1px solid #cfd8dc;
+  padding: 0.55rem 0.65rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #e9eef1;
+  font-weight: 700;
+}
+
+tbody tr:nth-child(even) {
+  background: #f7f9fa;
+}
+
+code {
+  background: #f2f4f7;
+  border: 1px solid #d8dde6;
+  border-radius: 3px;
+  font-size: 0.9em;
+  padding: 0.05rem 0.25rem;
+}
+
+pre {
+  margin: 1.2rem 0;
+  border-left: 5px solid var(--book-blue);
+  background: #f5f7fb;
+  overflow-x: auto;
+  padding: 0.9rem 1rem;
+  line-height: 1.45;
+}
+
+pre code {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.footnotes-section,
+.references-section {
+  margin: 2.35rem 0 0;
+}
+
+.footnotes-title,
+.references-title {
+  margin: 0 0 0.9rem;
+  border-bottom: 0;
+  padding-bottom: 0;
+  color: #000;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.footnotes,
+.references {
+  margin: 0 0 1rem;
+  padding-left: 1.35rem;
+  color: #000;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.footnotes li,
+.references li {
+  margin: 0 0 1.15rem;
+  padding-left: 0.15rem;
+}
+
+.footnotes a:not(.backlink),
+.references a:not(.backlink) {
+  color: var(--link-blue);
+  text-decoration: none;
+}
+
+.footnotes a:not(.backlink):hover,
+.footnotes a:not(.backlink):focus-visible,
+.references a:not(.backlink):hover,
+.references a:not(.backlink):focus-visible {
+  text-decoration: underline;
+}
+
+.backlink {
+  margin-left: 0.2rem;
+  color: var(--link-blue);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.backlink[aria-label] {
+  font-size: 0;
+}
+
+.backlink[aria-label]::before {
+  content: "\2191";
+  font-size: 0.84rem;
+}
+
+.backlink:hover,
+.backlink:focus-visible {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   Mobile / Responsive (screen only)
+   ========================================== */
+@media screen and (max-width: 680px) {
+  html {
+    font-size: 17px;
+  }
+
+  .book-shell {
+    padding: 24px 18px 56px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.38rem;
+  }
+
+  .box-title {
+    font-size: 1.25rem;
+  }
+
+  .box-body,
+  .pull-quote {
+    padding: 1rem;
+  }
+}
+
+/* ==========================================
+   Print Stylesheet Adjustments
+   ========================================== */
+@media print {
+  @page {
+    size: letter;
+    margin: 0.5in;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+  }
+
+  html,
+  body {
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    background: #fff !important;
+    color: #000 !important;
+    width: 100% !important;
+    max-width: none !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Fixed physical content width – the single most important rule */
+  .book-shell {
+    width: 6.9in !important;          /* slightly under 7 in for safety */
+    max-width: 6.9in !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  h1 {
+    font-size: 20pt !important;
+    line-height: 1.18 !important;
+    margin: 0 0 12pt !important;
+  }
+
+  h2 {
+    font-size: 14pt !important;
+    line-height: 1.25 !important;
+    margin: 16pt 0 8pt !important;
+  }
+
+  h3 {
+    font-size: 12pt !important;
+    line-height: 1.3 !important;
+    margin: 12pt 0 6pt !important;
+  }
+
+  h4,
+  .box-title {
+    font-size: 11pt !important;
+    line-height: 1.3 !important;
+  }
+
+  p,
+  li,
+  dt,
+  dd,
+  td,
+  th,
+  caption,
+  .caption,
+  .source,
+  .pull-quote,
+  .definition-list {
+    font-size: 10.5pt !important;
+    line-height: 1.45 !important;
+  }
+
+  .book-meta,
+  sup,
+  .footnotes,
+  .footnotes li,
+  .references,
+  .references li,
+  .footnotes-title,
+  .references-title {
+    font-size: 9pt !important;
+  }
+
+  /* Force long URLs and unbroken strings to wrap */
+  a,
+  .footnotes a,
+  .references a,
+  td,
+  th {
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    hyphens: auto !important;
+  }
+
+  .table-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+    font-size: 9.5pt !important;   /* slightly smaller so 5-col tables fit */
+  }
+
+  th,
+  td {
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    hyphens: auto !important;
+    padding: 0.35rem 0.4rem !important;
+  }
+
+  pre,
+  code {
+    white-space: pre-wrap !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+
+  img,
+  svg,
+  canvas,
+  iframe,
+  .book-figure img,
+  .video-embed {
+    max-width: 100% !important;
+  }
+
+  img,
+  .book-figure img {
+    display: block !important;
+    width: 65% !important;
+    height: auto !important;
+    margin: 12pt auto !important;
+  }
+
+  /* Prevent any residual header/footer or nav from affecting measure */
+  .chapter-nav {
+    display: none !important;
+  }
+}
